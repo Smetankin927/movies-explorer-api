@@ -1,5 +1,6 @@
 // app.js — входной файл
 
+require("dotenv").config(); // теперь всё в process.env.*NAME*
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");

@@ -4,6 +4,7 @@
 const User = require("../models/users");
 const bcrypt = require("bcryptjs"); // hash
 const jwt = require("jsonwebtoken"); // импортируем модуль jsonwebtoken
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 const {
   NotFoundError, //404
@@ -135,9 +136,13 @@ function login(req, res, next) {
     .then((user) => {
       // аутентификация успешна! пользователь в переменной user
       //создадим токен
-      const token = jwt.sign({ _id: user._id }, "some-secret-key", {
-        expiresIn: "7d",
-      });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === "production" ? JWT_SECRET : "dev-secret",
+        {
+          expiresIn: "7d",
+        }
+      );
       //записываем в куки
       res.cookie("jwt", token);
       // вернём токен

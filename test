@@ -28,3 +28,32 @@
 "nameRU":"Ган-гам стайл",
 "nameEN":"I am не найден"
 }
+
+1. создать связь ssh github
+2. ...
+3. sudo service mongod start // запуск БД
+4. sudo systemctl enable mongod.service // для перезапуска по умолчанию
+5. sudo npm install pm2
+
+8....
+9. git clone 
+9.1. Создать env file (не должен публиковаться на гихаб)
+DB_ADDRESS=mongodb://127.0.0.1:27017/mestodb ???
+10. в папках бэка и фронта npm ci
+11. создание доменов через сайт nomoreparties
+12. sudo apt install nginx -y
+13. sudo ufw allow 'Nginx Full' (вообще делал в папке бэка)
+14.  sudo ufw allow OpenSSh (вообще делал в папке бэка)
+15. sudo ufw app list  (проверка)
+16. sudo ufw enable (y)
+17. sudo systemctl enable --now nginx 
+18. (/etc/nginx) нас интересуют sites-avaliable и sites-enabled
+19. конфиг бэка и фронта
+20. sudo nginx -t проверка синтаксических ошибок
+21. sudo systemctl restart nginx
+22. запуск бэка в папке бэка
+23.  sudo npm install pm2 -g
+6. pm2 start app.js -- name *NAME*
+7. pm2 status
+24. локально в package json Фронта скрипт deploy (фронт и бэк на одном домене)
+25. 
