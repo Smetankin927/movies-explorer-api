@@ -53,7 +53,7 @@ function createMovie(req, res, next) {
 }
 
 function getMovies(req, res) {
-  Movie.find({})
+  Movie.find({ owner: req.user._id })
     .then((cards) => res.send(cards))
     .catch((err) => next(err));
 }

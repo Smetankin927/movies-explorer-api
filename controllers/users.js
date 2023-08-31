@@ -19,6 +19,7 @@ const { errors } = require("celebrate");
 function createUser(req, res, next) {
   const { name, email, password } = req.body;
   //
+  console.log("we create");
   bcrypt
     .hash(password, 10)
     .then((hash) =>

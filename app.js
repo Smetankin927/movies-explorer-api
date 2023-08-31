@@ -13,10 +13,12 @@ const indexRoute = require("./routes/index"); // импортируем роут
 
 const auth = require("./middlewares/auth");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
+const errorHandler = require("./middlewares/error-handler");
 
 const { createUser, login, signOut } = require("./controllers/users");
 
 const { PORT = 3000 } = process.env;
+const { DB_ADDRESS } = process.env;
 const app = express();
 app.use(
   cors({
@@ -38,7 +40,7 @@ app.use(cookies());
 app.use(bodyParser.json());
 
 // подключаемся к серверу mongo
-mongoose.connect("mongodb://127.0.0.1:27017/mestodb");
+mongoose.connect(DB_ADDRESS);
 // подключаем мидлвары, роуты и всё остальное...
 app.use(requestLogger); // подключаем логгер запросов
 //краш-тест
@@ -54,7 +56,7 @@ app.post(
   celebrate({
     body: Joi.object()
       .keys({
-        name: Joi.string().min(2).max(30),
+        name: Joi.string().required().min(2).max(30),
         email: Joi.string().required().email(),
         password: Joi.string().required(),
       })
@@ -85,17 +87,7 @@ app.use(errorLogger); // подключаем логгер ошибок
 //обработка ошибок
 app.use(errors()); // обработчик ошибок celebrate
 
-app.use((err, req, res, next) => {
-  //если у ошибки нет статуса, выставляем 500
-  console.log("Ошибка");
-  console.log(err.statusCode);
-  const { statusCode = 500, message } = err;
-
-  res.status(statusCode).send({
-    // проверяем статус и выставляем сообщение в зависимости от него
-    message: statusCode === 500 ? "На сервере22 произошла ошибка" : message,
-  });
-});
+app.use(errorHandler); //централизованный обработчик ошибок
 
 app.listen(3000, () => {
   // Если всё работает, консоль покажет, какой порт приложение слушает
