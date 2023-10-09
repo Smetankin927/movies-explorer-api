@@ -1,0 +1,10 @@
+.footer__year {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+}

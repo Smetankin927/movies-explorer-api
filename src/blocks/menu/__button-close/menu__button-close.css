@@ -1,0 +1,25 @@
+.menu__button-close {
+  padding: 0;
+  margin: 0;
+  margin-top: 23px;
+  margin-right: 23px;
+  min-width: 31.11269px;
+  min-height: 31.11269px;
+  border: none;
+  background: transparent;
+  background-image: url(../../../images/Group.svg);
+  background-size: contain;
+
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 740px) {
+  .menu__button-close {
+    margin-top: 14px;
+    margin-right: 14px;
+  }
+}
+
+.menu__button-close:hover {
+  cursor: pointer;
+}

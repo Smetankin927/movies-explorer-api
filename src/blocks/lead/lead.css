@@ -1,0 +1,22 @@
+.lead {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 75px 70px 75px 70px;
+  justify-content: space-between;
+  background-color: rgba(7, 48, 66, 1);
+}
+
+@media screen and (max-width: 880px) {
+  .lead {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+/* ///FIXME */
+@media screen and (max-width: 740px) {
+  .lead {
+    padding: 70px 14px 30px 14px;
+  }
+}

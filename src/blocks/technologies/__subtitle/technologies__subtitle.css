@@ -1,0 +1,29 @@
+.technologies__subtitle {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 26px;
+  max-width: 460px;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .technologies__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 21px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .technologies__subtitle {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,17 @@
+.student__about-text {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 880px) {
+  .student__about-text {
+    max-width: 364px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .student__about-text {
+    margin-top: 40px;
+  }
+}

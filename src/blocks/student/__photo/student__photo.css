@@ -1,0 +1,18 @@
+.student__photo {
+  /* display: inline; */
+  width: 270px;
+  height: 327px;
+}
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .student__photo {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .student__photo {
+    width: 292px;
+    height: 352px;
+  }
+}

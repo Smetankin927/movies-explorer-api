@@ -1,0 +1,26 @@
+.student__description {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  margin-top: 7px;
+}
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .student__description {
+    font-size: 12px;
+    line-height: 18px;
+    width: 364px;
+    margin-top: 3px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .student__description {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 3px;
+  }
+}

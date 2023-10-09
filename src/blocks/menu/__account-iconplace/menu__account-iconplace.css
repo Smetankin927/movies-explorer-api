@@ -1,0 +1,12 @@
+.menu__account-iconplace {
+  margin: 0;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+  background-color: rgba(249, 249, 249, 1);
+  display: flex;
+  align-items: center;
+  margin-right: -3px;
+  margin-left: 8px;
+}
