@@ -1,0 +1,14 @@
+.cards-grid__remove-button {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(249, 249, 249, 1);
+  background-image: url(../../../images/icon__COLOR_remove.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 12px;
+}
+
+.cards-grid__remove-button:hover {
+  cursor: pointer;
+}

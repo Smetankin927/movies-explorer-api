@@ -1,0 +1,8 @@
+.menu__links-container {
+  margin-top: 110px;
+}
+@media screen and (max-width: 740px) {
+  .menu__links-container {
+    margin-top: 100px;
+  }
+}

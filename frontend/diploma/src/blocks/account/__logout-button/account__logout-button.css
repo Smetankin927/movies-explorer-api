@@ -1,0 +1,29 @@
+.account__logout-button {
+  background-color: transparent;
+  width: fit-content;
+  border: none;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+
+  color: rgba(255, 48, 85, 1);
+
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 318px) and (max-width: 500px) {
+  .account__logout-button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.account__logout-button:hover {
+  cursor: pointer;
+  color: rgba(255, 48, 85, 0.7);
+}

@@ -1,0 +1,28 @@
+.header__menu-button {
+  padding: 0;
+  margin: 0;
+  margin-top: -2px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-image: url(../../../images/icon__Menu.svg);
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .header__menu-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 740px) {
+  .header__menu-button {
+    background-size: 34px 45px;
+  }
+}
+
+.header__menu-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

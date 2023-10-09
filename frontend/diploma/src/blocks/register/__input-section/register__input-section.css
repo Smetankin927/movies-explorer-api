@@ -1,0 +1,16 @@
+.register__input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 880px) {
+  .register__input-section {
+    margin-top: 10px;
+  }
+}
+
+.register__input-section:first-child {
+  margin-top: 0;
+}

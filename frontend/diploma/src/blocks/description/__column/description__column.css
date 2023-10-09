@@ -1,0 +1,19 @@
+.description__column {
+  width: 550px;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .description__column {
+    width: 319px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 740px) {
+  .description__column {
+    width: 100%;
+    margin-top: 56px;
+  }
+  .description__column:first-child {
+    margin-top: 0px;
+  }
+}

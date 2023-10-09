@@ -1,0 +1,17 @@
+.menu__links-item {
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+@media screen and (max-width: 740px) {
+  .menu__links-item {
+    margin-bottom: 24px;
+  }
+}
+
+.menu__links-item:last-child {
+  margin-bottom: 0px;
+}

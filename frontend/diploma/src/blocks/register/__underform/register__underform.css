@@ -1,0 +1,7 @@
+.register__underform {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  margin-top: 16px;
+}

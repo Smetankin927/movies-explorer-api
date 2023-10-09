@@ -1,0 +1,28 @@
+.header__button-login {
+  padding: 0;
+  margin: 0;
+  width: 76px;
+  height: 32px;
+
+  border-radius: 3px;
+  background-color: rgba(43, 224, 128, 1);
+
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (max-width: 741px) {
+  .header__button-login {
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+  }
+}
+.header__button-login:hover {
+  cursor: pointer;
+}

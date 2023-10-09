@@ -1,0 +1,22 @@
+.register__submit-button {
+  background-color: rgba(52, 86, 243, 1);
+  height: 45px;
+  border-radius: 3px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  padding: 0;
+  margin-top: 134px;
+}
+
+@media screen and (max-width: 741px) {
+  .register__submit-button {
+    font-size: 12px;
+    margin-top: 222px;
+    line-height: 15px;
+  }
+}

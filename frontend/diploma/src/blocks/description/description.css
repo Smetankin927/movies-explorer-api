@@ -1,0 +1,19 @@
+.description {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px 95px 70px;
+  max-width: 1280px;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .description {
+    padding: 90px 50px 78px 50px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .description {
+    padding: 72px 18px 30px 18px;
+  }
+}

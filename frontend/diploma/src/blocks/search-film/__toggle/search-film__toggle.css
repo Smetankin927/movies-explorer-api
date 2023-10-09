@@ -1,0 +1,14 @@
+.search-film__toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: fit-content;
+  height: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .search-film__toggle {
+    flex-direction: row-reverse;
+  }
+}
