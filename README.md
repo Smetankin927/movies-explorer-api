@@ -5,3 +5,5 @@
 IP (51.250.104.182)
 
 Backend https://api.bubble.nomoredomainsicu.ru
+
+Frontend: макет light-1
