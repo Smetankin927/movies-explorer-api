@@ -14,8 +14,8 @@ function Navigate(props) {
   }`;
   let loginButtoClassName = `${
     location.pathname === "/"
-      ? "header__button-login_authorized"
-      : "header__button-login_authorized header__button-login_authorized_white"
+      ? "header__button-account"
+      : "header__button-account header__button-account_white"
   }`;
 
   const handleAccountClick = () => {
@@ -23,7 +23,7 @@ function Navigate(props) {
   };
   return (
     <>
-      <div className="header__linksbox">
+      <nav className="header__linksbox">
         <NavLink
           to="/movies"
           className={({ isActive }) =>
@@ -48,19 +48,24 @@ function Navigate(props) {
         >
           Сохраненные фильмы
         </NavLink>
-      </div>
-      <button className={loginButtoClassName} onClick={handleAccountClick}>
+      </nav>
+      <button
+        className={loginButtoClassName}
+        type="button"
+        onClick={handleAccountClick}
+      >
         Аккаунт
-        <div className="header__account-iconplace">
+        <span className="header__account-iconplace">
           <img
             className="header__account-icon"
             src={accIconPath}
             alt="иконка аккаунта"
           />
-        </div>
+        </span>
       </button>
       <button
         className="header__menu-button"
+        type="button"
         onClick={props.onMenuClick}
       ></button>
     </>

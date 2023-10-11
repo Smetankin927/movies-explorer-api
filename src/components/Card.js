@@ -14,14 +14,10 @@ function Card(props) {
 
   /* /// */
   return (
-    <div className="cards-grid__item">
-      <img
-        className="cards-grid__img"
-        src={props.filmImg}
-        alt="кадр из фильма"
-      />
+    <li className="cards-grid__item">
+      <img className="cards-grid__img" src={props.filmImg} alt={props.altImg} />
       <div className="cards-grid__overline">
-        <p className="cards-grid__name">33 слова о дизайне</p>
+        <h2 className="cards-grid__name">33 слова о дизайне</h2>
         {isButtonLike && (
           <button
             className={`cards-grid__like-button ${
@@ -40,7 +36,7 @@ function Card(props) {
         )}
       </div>
       <p className="cards-grid__chrono">1ч42м</p>
-    </div>
+    </li>
   );
 }
 

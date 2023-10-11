@@ -6,6 +6,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .search-film__options {
+    justify-content: flex-end;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .search-film__options {
     justify-content: center;

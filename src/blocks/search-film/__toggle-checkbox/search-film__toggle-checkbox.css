@@ -1,11 +1,5 @@
 .search-film__toggle-checkbox {
-  position: absolute;
+  height: 0;
+  width: 0;
   visibility: hidden;
-}
-
-.search-film__toggle-checkbox:checked + .search-film__toggle-switch {
-  background: #56c080;
-}
-.search-film__toggle-checkbox:checked + .search-film__toggle-switch:before {
-  left: 22px;
 }

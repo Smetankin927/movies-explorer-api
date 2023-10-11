@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Switch from "./Switch";
 function SearchFilm() {
+  const [value, setValue] = useState(false);
   return (
-    <section className="search-film">
+    <div className="search-film">
       <form className="search-film__form">
         <div className="search-film__input-container">
           <input
@@ -15,21 +17,11 @@ function SearchFilm() {
             Найти
           </button>
         </div>
-
         <div className="search-film__options">
-          <label className="search-film__toggle" for="shortFilms">
-            <input
-              className="search-film__toggle-checkbox"
-              type="checkbox"
-              id="shortFilms"
-              checked
-            />
-            <div className="search-film__toggle-switch"></div>
-            <span className="search-film__toggle-name">Короткометражки</span>
-          </label>
+          <Switch isOn={value} handleToggle={() => setValue(!value)} />
         </div>
       </form>
-    </section>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import studentImgPath from "../images/pic__COLOR_pic.png";
 import arrowImgPath from "../images/text__COLOR_font-main.svg";
 function Student() {
   return (
-    <section className="student">
+    <section className="description student">
       <h2 className="description__title">Студент</h2>
       <div className="student__about">
         <div className="student__about-text">
@@ -13,8 +13,8 @@ function Student() {
             Я родился и живу в Саратове, закончил факультет экономики СГУ. У
             меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь
             бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ
-            Контур». После того, как прошёл курс по <nobr>веб-разработке</nobr>,
-            начал заниматься фриланс-заказами и ушёл с постоянной работы.
+            Контур». После того, как прошёл курс по веб-разработке, начал
+            заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
           <a className="student__git-link" href="/">
             Github

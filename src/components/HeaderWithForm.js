@@ -1,15 +1,15 @@
 import React from "react";
-import accIconPath from "../images/logo__COLOR_main-1.png";
+import accIconPath from "../images/logo.svg";
 function HeaderWithForm(props) {
   return (
-    <header className="header__with-form ">
+    <header className="header-with-form">
       <img
-        className="header__logo header__logo_with-form"
+        className="header-with-form__logo"
         src={accIconPath}
         alt="логотип"
         onClick={props.handleLogoClick}
       />
-      <hi className="header__greeting">{props.Greeting}</hi>
+      <h1 className="header-with-form__greeting">{props.Greeting}</h1>
     </header>
   );
 }

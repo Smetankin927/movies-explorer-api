@@ -1,42 +1,42 @@
 import React from "react";
 function Technologies() {
   return (
-    <section className="technologies">
+    <section className="description technologies">
       <h2 className="description__title">Технологии</h2>
       <h3 className="technologies__center-title">7 технологий</h3>
       <p className="technologies__subtitle">
         На курсе веб-разработки мы освоили технологии, которые применили в
         дипломном проекте.
       </p>
-      <div className="technologies__card-container">
-        <div className="technologies__card">
+      <ul className="technologies__card-container">
+        <li className="technologies__card">
           <p className="technologies__card-text">HTML</p>
-        </div>
+        </li>
 
-        <div className="technologies__card">
+        <li className="technologies__card">
           <p className="technologies__card-text">CSS</p>
-        </div>
+        </li>
 
-        <div className="technologies__card">
+        <li className="technologies__card">
           <p className="technologies__card-text">JS</p>
-        </div>
+        </li>
 
-        <div className="technologies__card">
+        <li className="technologies__card">
           <p className="technologies__card-text">React</p>
-        </div>
+        </li>
 
-        <div className="technologies__card">
+        <li className="technologies__card">
           <p className="technologies__card-text">Git</p>
-        </div>
+        </li>
 
-        <div className="technologies__card">
+        <li className="technologies__card">
           <p className="technologies__card-text">Express.js</p>
-        </div>
+        </li>
 
-        <div className="technologies__card">
+        <li className="technologies__card">
           <p className="technologies__card-text">MongoDB</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   );
 }

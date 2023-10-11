@@ -1,8 +1,9 @@
 .register__submit-button {
   background-color: rgba(52, 86, 243, 1);
   height: 45px;
+  border: none;
   border-radius: 3px;
-  font-family: Inter;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;

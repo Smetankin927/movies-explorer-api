@@ -9,9 +9,10 @@
   justify-content: flex-end;
 
   align-items: center;
+  border: none;
   border-radius: 40px;
   background-color: rgba(43, 224, 128, 1);
-  font-family: Inter;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 12px;

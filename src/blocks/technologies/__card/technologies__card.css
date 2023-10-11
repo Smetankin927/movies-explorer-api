@@ -1,4 +1,5 @@
 .technologies__card {
+  list-style-type: none;
   width: 90px;
   height: 60px;
   display: flex;

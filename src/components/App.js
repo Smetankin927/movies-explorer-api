@@ -42,9 +42,10 @@ function App() {
         isHeaderVisible={isHeaderVisible}
         onMenuClick={handleMenuClick}
       />
+
       <Routes>
-        <Route path="/sign-up" element={<Registration />} />
-        <Route path="/sign-in" element={<Login />} />
+        <Route path="/signup" element={<Registration />} />
+        <Route path="/signin" element={<Login />} />
         <Route path="/" element={<Main />} />
         <Route path="/movies" element={<MoviesCardList />} />
         <Route path="/movies-saved" element={<SavedMovieCardList />} />

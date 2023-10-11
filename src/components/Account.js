@@ -1,22 +1,45 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Account() {
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    navigate("/");
+  };
   return (
-    <section className="account">
-      <h1 className="account__greeting">Привет, Виталий!</h1>
-      <div className="account__info">
-        <p className="account__info-text">
-          <span className="account__info-text-key">Имя</span>
-          <span className="account__info-text-value">Виталий</span>
-        </p>
-        <p className="account__info-text">
-          <span className="account__info-text-key">E-mail</span>
-          <span className="account__info-text-value">pochta@yandex.ru</span>
-        </p>
-      </div>
-      <button className="account__edit-button">Редактировать</button>
-      <button className="account__logout-button">Выйти из аккаунта</button>
-    </section>
+    <main className="content">
+      <section className="account">
+        <h1 className="account__greeting">Привет, Виталий!</h1>
+        <form className="account__info">
+          <div className="account__info-text">
+            <span className="account__info-text-key">Имя</span>
+            <input
+              className="account__info-text-value"
+              type="text"
+              value={`Виталий`}
+            />
+          </div>
+          <div className="account__info-text">
+            <span className="account__info-text-key">E-mail</span>
+            <input
+              className="account__info-text-value"
+              type="email"
+              value={`pochta@yandex.ru`}
+            />
+          </div>
+        </form>
+        <button className="account__edit-button" type="submit">
+          Редактировать
+        </button>
+        <button
+          className="account__logout-button"
+          type="button"
+          onClick={handleLogOut}
+        >
+          Выйти из аккаунта
+        </button>
+      </section>
+    </main>
   );
 }
 
