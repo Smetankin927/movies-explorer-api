@@ -16,7 +16,12 @@ function Student() {
             Контур». После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
-          <a className="student__git-link" href="/">
+          <a
+            className="student__git-link"
+            href="https://github.com/Smetankin927"
+            target="_blank"
+            rel="noreferrer"
+          >
             Github
           </a>
         </div>
@@ -30,7 +35,12 @@ function Student() {
       <nav className="student__links-container">
         <ul className="student__links-list">
           <li className="student__links-list-item">
-            <a className="student__link" href="/">
+            <a
+              className="student__link"
+              href="https://github.com/Smetankin927"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className="student__link-text">Статичный сайт</p>
               <img
                 className="student__link-img"
@@ -40,7 +50,12 @@ function Student() {
             </a>
           </li>
           <li className="student__links-list-item">
-            <a className="student__link" href="/">
+            <a
+              className="student__link"
+              href="https://github.com/Smetankin927"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className="student__link-text">Адаптивный сайт</p>
               <img
                 className="student__link-img"
@@ -50,7 +65,12 @@ function Student() {
             </a>
           </li>
           <li className="student__links-list-item">
-            <a className="student__link" href="/">
+            <a
+              className="student__link"
+              href="https://github.com/Smetankin927"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className="student__link-text">Одностраничное приложение</p>
               <img
                 className="student__link-img"
