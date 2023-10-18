@@ -1,0 +1,9 @@
+.description__underline-text_front {
+  width: 80%;
+}
+
+@media screen and (max-width: 740px) {
+  .description__underline-text_front {
+    width: 64.788%;
+  }
+}

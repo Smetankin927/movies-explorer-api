@@ -1,0 +1,13 @@
+.description__columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 740px) {
+  .description__columns {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+}

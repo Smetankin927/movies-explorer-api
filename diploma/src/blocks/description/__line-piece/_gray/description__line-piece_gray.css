@@ -1,0 +1,10 @@
+.description__line-piece_gray {
+  width: 80%;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+@media screen and (max-width: 740px) {
+  .description__line-piece_gray {
+    width: 64.788%;
+  }
+}

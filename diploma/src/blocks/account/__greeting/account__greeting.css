@@ -1,0 +1,17 @@
+.account__greeting {
+  padding: 0;
+  margin: 0;
+  margin-top: 74px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+@media screen and (min-width: 318px) and (max-width: 500px) {
+  .account__greeting {
+    margin-top: 70px;
+  }
+}

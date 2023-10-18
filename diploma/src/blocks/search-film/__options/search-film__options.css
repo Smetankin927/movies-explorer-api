@@ -1,0 +1,19 @@
+.search-film__options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* max-width: fit-content; */
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .search-film__options {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .search-film__options {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,23 @@
+.student__link-text {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 1);
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .student__link-text {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 741px) {
+  .student__link-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

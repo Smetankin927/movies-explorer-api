@@ -1,0 +1,27 @@
+.student__git-link {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  margin-top: 99px;
+  text-decoration: none;
+}
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .student__git-link {
+    margin-top: 87px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .student__git-link {
+    margin-top: 38px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.student__git-link:hover {
+  cursor: pointer;
+}

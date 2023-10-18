@@ -1,0 +1,24 @@
+.header__button-registration {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 25px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+@media screen and (max-width: 741px) {
+  .header__button-registration {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+}
+.header__button-registration:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}

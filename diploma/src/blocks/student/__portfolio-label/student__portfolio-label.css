@@ -1,0 +1,25 @@
+.student__portfolio-label {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(160, 160, 160, 1);
+  margin: 100px 0px 50px 0px;
+  padding: 0;
+}
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .student__portfolio-label {
+    margin-top: 88px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .student__portfolio-label {
+    margin-top: 67px;
+    margin-bottom: 43px;
+    font-size: 14px;
+  }
+}

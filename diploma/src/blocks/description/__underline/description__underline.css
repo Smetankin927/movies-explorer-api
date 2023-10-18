@@ -1,0 +1,4 @@
+.description__underline {
+  display: flex;
+  flex-direction: row;
+}

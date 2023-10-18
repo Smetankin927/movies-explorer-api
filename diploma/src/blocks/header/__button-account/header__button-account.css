@@ -1,0 +1,30 @@
+.header__button-account {
+  padding: 0 5px;
+  margin: 0;
+  width: 100px;
+  height: 32px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  align-items: center;
+  border: none;
+  border-radius: 40px;
+  background-color: rgba(43, 224, 128, 1);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .header__button-account {
+    display: none;
+  }
+}
+
+.header__button-account:hover {
+  cursor: pointer;
+}

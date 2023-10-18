@@ -1,0 +1,28 @@
+.cards-grid__container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: repeat(4, 228px);
+  column-gap: 20px;
+  row-gap: 40px;
+  width: max-content;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1180px) {
+  .cards-grid__container {
+    grid-template-columns: repeat(2, 339px);
+    grid-template-rows: repeat(4, 268px);
+    column-gap: 30px; /*выразить?*/
+    row-gap: 32px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .cards-grid__container {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(5, 244px);
+    column-gap: 0px; /*выразить?*/
+    row-gap: 36px;
+  }
+}
