@@ -29,7 +29,9 @@ function Registration(props) {
         //OPEN MODAL WINDOW
       })
       .then(() => {
-        navigate("/signin");
+        props.handleLogin(); //set isLogedIn = true
+        //navigate("/signin");
+        navigate("/movies");
       })
       .catch((err) => {
         console.log("ПРОБЛЕМА РЕГИСТРАЦИИ");

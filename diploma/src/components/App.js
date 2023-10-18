@@ -463,6 +463,9 @@ function App() {
             path="/signup"
             element={
               <Registration
+                handleLogin={() => {
+                  setLoggedIn(true);
+                }}
                 setTooltipMessages={setTooltipMessages}
                 setIsInfoTooltipOpen={setIsInfoTooltipOpen}
                 setIsSuccessInfoTooltipStatus={setIsSuccessInfoTooltipStatus}

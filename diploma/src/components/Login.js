@@ -33,7 +33,7 @@ function Login(props) {
         props.setUserEmail(values.email); //FIXME
         // props.setIsSuccessInfoTooltipStatus(true);
         // props.setIsInfoTooltipOpen(true);
-        navigate("/");
+        navigate("/movies");
       })
       .catch((err) => {
         console.log(err);
