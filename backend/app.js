@@ -25,7 +25,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
-      "https://api.bubble.nomoredomainsicu.ru",
+      "https://bubble.nomoredomainsicu.ru",
       "https://api.nomoreparties.co/beatfilm-movies",
     ],
     credentials: true,
