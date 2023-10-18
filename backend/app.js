@@ -25,7 +25,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
-      "https://bubble.nomoredomainsicu.ru",
+      "https://api.bubble.nomoredomainsicu.ru",
       // "https://api.nomoreparties.co/beatfilm-movies",
     ],
     credentials: true,
@@ -33,10 +33,7 @@ app.use(
 );
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://api.nomoreparties.co/beatfilm-movies",
-    ],
+    origin: ["https://api.nomoreparties.co/beatfilm-movies"],
     credentials: false,
   })
 );
