@@ -77,7 +77,7 @@ function Registration(props) {
               onChange={handleEmail}
               required
             />
-            <span className="register__input-error">{""}</span>
+            <span className="register__input-error">{errors.email}</span>
           </div>
 
           <div className="register__input-section">
@@ -85,6 +85,8 @@ function Registration(props) {
             <input
               className="register__input"
               type="password"
+              minLength="4"
+              maxLength="30"
               name="password"
               value={values.password}
               placeholder="Пароль"

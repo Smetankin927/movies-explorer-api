@@ -35,7 +35,7 @@ function MoviesCardList(props) {
                     card={item}
                     onLikeCard={props.onLikeCard}
                     buttonName={"like"}
-                    key={item._id}
+                    key={item.id}
                     Name={item.nameRU}
                     filmImg={`https://api.nomoreparties.co/${item.image.url}`}
                     altImg={item.image.name}

@@ -26,17 +26,17 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "https://api.bubble.nomoredomainsicu.ru",
-      // "https://api.nomoreparties.co/beatfilm-movies",
+      "https://api.nomoreparties.co/beatfilm-movies",
     ],
     credentials: true,
   })
 );
-app.use(
-  cors({
-    origin: ["https://api.nomoreparties.co/beatfilm-movies"],
-    credentials: false,
-  })
-);
+//app.use(
+//  cors({
+//    origin: ["https://api.nomoreparties.co/beatfilm-movies"],
+//    credentials: false,
+//  })
+//);
 
 app.use(
   bodyParser.urlencoded({
