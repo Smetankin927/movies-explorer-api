@@ -76,9 +76,9 @@ class MoviesApi {
 //api
 export const apiMovies = new MoviesApi({
   externUrl: "https://api.nomoreparties.co/beatfilm-movies",
-  baseUrl: "http://localhost:3000",
+  //baseUrl: "http://localhost:3000",
   //baseUrl: "https://api.monkey.nomoreparties.co",
-  //baseUrl: "https://api.bubble.nomoredomainsicu.ru",
+  baseUrl: "https://api.bubble.nomoredomainsicu.ru",
   headers: {
     //authorization: "5b779ce5-67ec-4158-af6f-f7e8e8864a40",
     "Content-Type": "application/json",
