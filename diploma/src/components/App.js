@@ -185,7 +185,7 @@ function App() {
     localStorage.removeItem("jwt");
     localStorage.removeItem("cards");
     localStorage.removeItem("filmSearch");
-    localStorage.removeItem("filmSearchSaved");
+    //localStorage.removeItem("filmSearchSaved");
     localStorage.removeItem("numRender");
     localStorage.removeItem("toogle");
     //localStorage.removeItem("filmSaved");
@@ -204,7 +204,8 @@ function App() {
   const [cardSaved, setCardSaved] = React.useState([]);
 
   /******               работа с localstorage начальный список сохраненных карточек и лайков     *******/
-  const [valueToogle, setValueToogle] = React.useState(false); //for Toogre shortFilms
+  const [valueToogle, setValueToogle] = React.useState(false); //for Toogre shortFilms фильмы
+  const [valueToogleSaved, setValueToogleSaved] = React.useState(false); //for Toogre shortFilms фильмы сохраненные
 
   // React.useEffect(() => {
   //начальные значения окна
@@ -284,6 +285,7 @@ function App() {
   /******               фильтрация список карточек          *******/
   const filterSavedFilms = (filmname, valueToogle) => {
     console.log("here");
+    console.log(cardsSavedRender);
     if (valueToogle) {
       if (filmname) {
         let newCards = cardSaved.filter(function (item) {
@@ -301,12 +303,16 @@ function App() {
         });
         setCardsSavedRender(newCards);
         setPreloaderActive(false);
+        console.log("here1");
+        console.log(cardsSavedRender);
       } else {
         let newCards = cardSaved.filter(function (item) {
           return item.duration < 60;
         });
         setCardsSavedRender(newCards);
         setPreloaderActive(false);
+        console.log("here2");
+        console.log(cardsSavedRender);
       }
     } else {
       if (filmname) {
@@ -324,7 +330,11 @@ function App() {
         });
         setCardsSavedRender(newCards);
         setPreloaderActive(false);
+        console.log("here3");
+        console.log(cardsSavedRender);
       } else {
+        console.log("here4");
+        console.log(cardSaved);
         setCardsSavedRender(cardSaved);
         setPreloaderActive(false);
       }
@@ -373,11 +383,24 @@ function App() {
       }
     }
   };
+
+  /******               отслеживаем изменение чекбокса          *******/
+  React.useEffect(() => {
+    if (location.pathname !== "/movies-saved") {
+      setCardsSavedRender(cardSaved);
+      setValueToogleSaved(false);
+    }
+  }, [location.pathname]);
+
   /******               отслеживаем изменение чекбокса          *******/
   React.useEffect(() => {
     filterFilms(localStorage.getItem("filmSearch"), valueToogle);
-    filterSavedFilms(localStorage.getItem("filmSearchSaved"), valueToogle);
   }, [valueToogle]);
+
+  React.useEffect(() => {
+    filterSavedFilms(localStorage.getItem("filmSearchSaved"), valueToogleSaved);
+    //filterToogleSaved(valueToogleSaved);
+  }, [valueToogleSaved]);
   /******               отслеживаем изменение сохраненных карточек          *******/
   React.useEffect(() => {
     console.log("cardSAved in hhok");
@@ -495,8 +518,8 @@ function App() {
                 cards={cardsSavedRender}
                 loggedIn={loggedIn}
                 hadleSearchFilms={hadleSearchSavedFilms} //для проброса в search
-                isOn={valueToogle} //для проброса в search
-                setValue={setValueToogle} //для проброса в search
+                isOn={valueToogleSaved} //для проброса в search
+                setValue={setValueToogleSaved} //для проброса в search
                 setNumberCards={setNumberCards}
                 numberCards={numberCards} //для кнопки еще
                 numberMoreCards={numberMoreCards} //для кнопки еще

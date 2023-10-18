@@ -4,13 +4,11 @@ import Switch from "./Switch";
 import { useFormWithValidationFilms } from "../utils/FormValidate";
 function SearchFilm(props) {
   const location = useLocation();
-  // const [value, setValue] = useState(false); //for Toogre shortFilms
-
   /********         достаем запрос из   localStorage           ******* */
+  
+  localStorage.removeItem("filmSearchSaved");
   const filmSearch =
-    location.pathname === "/movies"
-      ? localStorage.getItem("filmSearch")
-      : localStorage.getItem("filmSearchSaved");
+    location.pathname === "/movies" ? localStorage.getItem("filmSearch") : "";
   const { values, handleChange, errors, isValid, resetForm } =
     useFormWithValidationFilms(filmSearch);
   /****************           ищем фильмы, записываем поиск в localStorage              *************** */
@@ -76,7 +74,16 @@ function SearchFilm(props) {
         <div className="search-film__options">
           <Switch
             isOn={props.isOn}
-            handleToggle={() => props.setValue(!props.isOn)}
+            handleToggle={() => {
+              if (location.pathname === "/movies") {
+                //отключил запись тугл в сохраненных фильмах
+                localStorage.setItem("toogle", !props.isOn);
+                localStorage.setItem("filmSearch", values.film);
+              } else if (location.pathname === "/movies-saved") {
+                localStorage.setItem("filmSearchSaved", values.film);
+              }
+              props.setValue(!props.isOn);
+            }}
           />
         </div>
       </form>
