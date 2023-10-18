@@ -1,6 +1,7 @@
 import React from "react";
 
 const Switch = ({ isOn, handleToggle }) => {
+  localStorage.setItem("toogle", isOn)
   return (
     <div className="search-film__toggle">
       <input

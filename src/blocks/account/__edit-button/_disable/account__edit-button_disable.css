@@ -1,0 +1,7 @@
+.account__edit-button_disable {
+  color: gray;
+}
+.account__edit-button_disable:hover {
+  cursor: auto;
+  color: gray;
+}

@@ -21,3 +21,8 @@
     line-height: 15px;
   }
 }
+
+.register__submit-button:hover{
+  cursor:pointer;
+  background-color: rgba(52, 86, 243, 0.7);
+}

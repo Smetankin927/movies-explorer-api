@@ -76,6 +76,27 @@
 @import url(./blocks/student/__link/student__link.css);
 @import url(./blocks/student/__link-text/student__link-text.css);
 @import url(./blocks/student/__link-img/student__link-img.css);
+/*/////////popup////////*/
+@import url("./blocks/popup/popup.css");
+@import url("./blocks/popup/_active/popup_active.css");
+@import url("./blocks/popup/__container/popup__container.css");
+@import url("./blocks/popup/__button-close/popup__button-close.css");
+@import url("./blocks/popup/__title/popup__title.css");
+@import url("./blocks/popup/__section/popup__section.css");
+@import url("./blocks/popup/__input/popup__input.css");
+@import url("./blocks/popup/__input-delCard/popup__input-delCard.css");
+@import url("./blocks/popup/__input-text/popup__input-text.css");
+@import url("./blocks/popup/__input-error/popup__input-error.css");
+@import url("./blocks/popup/__input-error/_active/popup__input-error_active.css");
+@import url("./blocks/popup/__button-save/popup__button-save.css");
+@import url("./blocks/popup/__button-save-delCard/popup__button-save-delCard.css");
+@import url("./blocks/popup/__button-save/_inactive/popup__button-save_inactive.css");
+@import url("./blocks/popup/__container-image/popup__container-image.css");
+@import url("./blocks/popup/__huge-image/popup__huge-image.css");
+@import url("./blocks/popup/__image-text/popup__image-text.css");
+/*/////////popup_registration-img////////*/
+@import url(./blocks/popup/__registration-image/popup__registration-image.css);
+@import url(./blocks/popup/__title/_registration/popup__title-registration.css);
 /* ///footer/// */
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/_invisible/footer_invisible.css);
@@ -91,6 +112,7 @@
 @import url(./blocks/search-film/__input-container/search-film__input-container.css);
 @import url(./blocks/search-film/__input/search-film__input.css);
 @import url(./blocks/search-film/__submit/search-film__submit.css);
+@import url(./blocks/search-film/__submit/_disabled/search-film__submit_disabled.css);
 @import url(./blocks/search-film/__options/search-film__options.css);
 /* //не менять порядок// */
 @import url(./blocks/search-film/__toggle/search-film__toggle.css);
@@ -109,6 +131,7 @@
 @import url(./blocks/cards-grid/__name/cards-grid__name.css);
 @import url(./blocks/cards-grid/__chrono/cards-grid__chrono.css);
 @import url(./blocks/cards-grid/__button-more/cards-grid__button-more.css);
+@import url(./blocks/cards-grid/__button-more/_hidden/cards-grid__button-more_hidde.css);
 /* ///account/// */
 @import url(./blocks/account/account.css);
 @import url(./blocks/account/__greeting/account__greeting.css);
@@ -118,6 +141,8 @@
 @import url(./blocks/account/__info-text-value/account__info-text-value.css);
 @import url(./blocks/account/__edit-button/account__edit-button.css);
 @import url(./blocks/account/__logout-button/account__logout-button.css);
+@import url(./blocks/account/__input-error/account__input-error.css);
+@import url(./blocks/account/__edit-button/_disable/account__edit-button_disable.css);
 /* ///register/// */
 @import url(./blocks/register/register.css);
 @import url(./blocks/register/__form/register__form.css);
@@ -127,6 +152,7 @@
 @import url(./blocks/register/__input-error/register__input-error.css);
 @import url(./blocks/register/__submit-button/register__submit-button.css);
 @import url(./blocks/register/__submit-button/_login/register__submit-button_login.css);
+@import url(./blocks/register/__submit-button/_disabled/register__submit-button_disabled.css);
 @import url(./blocks/register/__underform/register__underform.css);
 @import url(./blocks/register/__underform-text/register__underform-text.css);
 @import url(./blocks/register/__underform-link/register__underform-link.css);
@@ -150,4 +176,7 @@
 @import url(./blocks/menu/__account/menu__account.css);
 @import url(./blocks/menu/__account-iconplace/menu__account-iconplace.css);
 @import url(./blocks/menu/__account-icon/menu__account-icon.css);
-/* //// */
+/* ////preloader */
+@import url(./blocks/preloader/preloader.css);
+@import url(./blocks/preloader/__container/preloader__container.css);
+@import url(./blocks/preloader/__round/preloader__round.css);
