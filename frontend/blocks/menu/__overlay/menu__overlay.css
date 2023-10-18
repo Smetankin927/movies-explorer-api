@@ -1,0 +1,35 @@
+.menu__overlay {
+  cursor: pointer;
+
+  width: 32.291%;
+  min-height: 1024px;
+  height: 100%;
+}
+
+.menu__overlay::before {
+  content: " "; /* надо. */
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: #2a2c2f;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+
+/* @media screen and (min-width: 741px) and (max-width: 880px) {
+  .menu__overlay { */
+/* min-height: 768px; */
+/* } */
+/* }  */
+/*///*/
+
+.menu__overlay:hover::before {
+  opacity: 0.8;
+}
+@media screen and (max-width: 740px) {
+  .menu__overlay {
+    display: none;
+  }
+}

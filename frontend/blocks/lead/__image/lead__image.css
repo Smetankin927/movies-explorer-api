@@ -1,0 +1,18 @@
+.lead__image {
+  width: 310px;
+  height: 304px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .lead__image {
+    margin-top: 65px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .lead__image {
+    width: 210px;
+    height: 206px;
+  }
+}

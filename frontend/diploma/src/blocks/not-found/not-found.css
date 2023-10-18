@@ -10,7 +10,7 @@
 @media screen and (min-width: 741px) and (max-width: 880px) {
   .not-found {
     padding-top: 161px;
-    padding-bottom: 162px;
+    padding-bottom: 220px;
     height: fit-content;
   }
 }

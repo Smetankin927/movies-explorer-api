@@ -26,8 +26,18 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "https://monkey.nomoreparties.co",
+      // "https://api.nomoreparties.co/beatfilm-movies",
     ],
     credentials: true,
+  })
+);
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://api.nomoreparties.co/beatfilm-movies",
+    ],
+    credentials: false,
   })
 );
 
@@ -40,7 +50,7 @@ app.use(cookies());
 app.use(bodyParser.json());
 
 // подключаемся к серверу mongo
-mongoose.connect(DB_ADDRESS);
+mongoose.connect("mongodb://127.0.0.1:27017/mestodb");
 // подключаем мидлвары, роуты и всё остальное...
 app.use(requestLogger); // подключаем логгер запросов
 //краш-тест

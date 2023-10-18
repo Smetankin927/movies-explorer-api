@@ -1,0 +1,10 @@
+.header__logo {
+  padding: 0;
+  margin: 0;
+  width: 38px;
+  height: 38px;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+}

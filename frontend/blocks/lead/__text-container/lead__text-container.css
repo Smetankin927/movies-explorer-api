@@ -1,0 +1,21 @@
+.lead__text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  width: 100%;
+  height: fit-content;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .lead__text-container {
+    align-items: center;
+    margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 740px) {
+  .lead__text-container {
+    align-items: center;
+    margin-top: 44px;
+  }
+}

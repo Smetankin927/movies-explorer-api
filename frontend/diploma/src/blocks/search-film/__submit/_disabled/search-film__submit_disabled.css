@@ -1,0 +1,7 @@
+.search-film__submit_disabled {
+  background-color: grey;
+}
+.search-film__submit_disabled:hover {
+  background-color: grey;
+  cursor: auto;
+}

@@ -2,7 +2,7 @@ import React from "react";
 
 function Description() {
   return (
-    <section className="description">
+    <section className="description" id="description">
       <h2 className="description__title">О проекте</h2>
       <div className="description__columns">
         <div className="description__column">
@@ -33,8 +33,12 @@ function Description() {
         </div>
       </div>
       <div className="description__underline">
-        <p className="description__underline_back">Back-end</p>
-        <p className="description__underline_front">Front-end</p>
+        <p className="description__underline-text description__underline-text_back">
+          Back-end
+        </p>
+        <p className="description__underline-text description__underline-text_front">
+          Front-end
+        </p>
       </div>
     </section>
   );

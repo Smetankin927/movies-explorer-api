@@ -9,10 +9,18 @@ function Menu(props) {
   };
 
   return (
-    <section className={props.isOpen ? "menu menu_active" : "menu"}>
-      <button className="menu__overlay" onClick={props.onClose}></button>
+    <div className={props.isOpen ? "menu menu_active" : "menu"}>
+      <button
+        className="menu__overlay"
+        type="button"
+        onClick={props.onClose}
+      ></button>
       <div className="menu__bar">
-        <button className="menu__button-close" onClick={props.onClose}></button>
+        <button
+          className="menu__button-close"
+          type="button"
+          onClick={props.onClose}
+        ></button>
         <nav className="menu__links-container">
           <ul className="menu__links">
             <li className="menu__links-item">
@@ -47,14 +55,18 @@ function Menu(props) {
             </li>
           </ul>
         </nav>
-        <button className="menu__account" onClick={handleAccountClick}>
+        <button
+          className="menu__account"
+          type="button"
+          onClick={handleAccountClick}
+        >
           Аккаунт
-          <div className="menu__account-iconplace">
+          <span className="menu__account-iconplace">
             <img className="menu__account-icon" src={accIconImg} alt="иконка" />
-          </div>
+          </span>
         </button>
       </div>
-    </section>
+    </div>
   );
 }
 

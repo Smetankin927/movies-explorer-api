@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import HeaderWithForm from "./HeaderWithForm";
 import Navigate from "./Navigate";
 
-import logoPath from "../images/logo__COLOR_main-1.png";
+import logoPath from "../images/logo.svg";
 function Header(props) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -13,13 +13,13 @@ function Header(props) {
   };
 
   const handleLoginClick = () => {
-    navigate("/sign-in");
+    navigate("/signin");
   };
   const handleRegistrationClick = () => {
-    navigate("/sign-up");
+    navigate("/signup");
   };
   if (props.isHeaderVisible) {
-    if (location.pathname === "/sign-in") {
+    if (location.pathname === "/signin") {
       return (
         <HeaderWithForm
           Greeting={"Рады видеть!"}
@@ -28,7 +28,7 @@ function Header(props) {
       );
     } else if (location.pathname === "") {
       return <header className="header header_invisible"></header>;
-    } else if (location.pathname === "/sign-up") {
+    } else if (location.pathname === "/signup") {
       return (
         <HeaderWithForm
           Greeting={"Добро пожаловать!"}
@@ -63,17 +63,22 @@ function Header(props) {
             alt="логотип"
             onClick={handleLogoClick}
           />
-          <div className="header__buttons-container">
+          <nav className="header__buttons-container">
             <button
               className="header__button-registration"
+              type="button"
               onClick={handleRegistrationClick}
             >
               Регистрация
             </button>
-            <button className="header__button-login" onClick={handleLoginClick}>
+            <button
+              className="header__button-login"
+              type="button"
+              onClick={handleLoginClick}
+            >
               Войти
             </button>
-          </div>
+          </nav>
         </header>
       );
     }

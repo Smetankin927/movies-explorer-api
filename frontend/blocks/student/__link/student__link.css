@@ -1,0 +1,11 @@
+.student__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+/* .student__link:last-child {
+  padding-bottom: 0;
+  border: none;
+} */

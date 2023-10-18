@@ -1,0 +1,18 @@
+.description__line {
+  height: 35px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .description__line {
+    margin-top: 94px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .description__line {
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,23 @@
+.search-film {
+  height: 99px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 70px 70px 48px 70px;
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .search-film {
+    padding-top: 76px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .search-film {
+    padding-top: 83px;
+    padding-bottom: 60px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

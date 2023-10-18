@@ -2,7 +2,7 @@
   background-color: transparent;
   width: fit-content;
   border: none;
-  font-family: Inter;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -10,6 +10,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
+  margin: auto;
   margin-top: 222px;
   color: rgba(0, 0, 0, 1);
 }

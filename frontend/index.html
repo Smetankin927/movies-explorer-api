@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Diploma</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+    <!--убрать после js-->
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body class="page">
+    <header class="header__with-form">
+      <img
+        class="header__logo header__logo_with-form"
+        src="./images/logo__COLOR_main-1.png"
+        alt="логотип"
+      />
+      <hi class="header__greeting">Рады видеть</hi>
+    </header>
+    <main class="content">
+      <section class="cards-grid">
+        <div class="cards-grid__container">
+          <div class="cards-grid__item">
+            <img
+              class="cards-grid__img"
+              src="./images/pic__COLOR_film.png"
+              alt="кадр из фильма"
+            />
+            <div class="cards-grid__overline">
+              <p class="cards-grid__name">33 слова о дизайне</p>
+
+              <button class="cards-grid__like-button"></button>
+            </div>
+            <p class="cards-grid__chrono">1ч42м</p>
+          </div>
+        </div>
+        <button class="cards-grid__button-more">Ещё</button>
+      </section>
+      <section class="menu">
+        <a class="menu__overlay"></a>
+        <div class="menu__bar">
+          <button class="menu__button-close"></button>
+          <nav class="menu__links-container">
+            <ul class="menu__links">
+              <li class="menu__links-item">
+                <a class="menu__link" href="/"> Главная </a>
+              </li>
+              <li class="menu__links-item">
+                <a class="menu__link menu__link_current" href="/"> Фильмы </a>
+              </li>
+              <li class="menu__links-item">
+                <a class="menu__link" href="/"> Сохраненные фильмы </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="menu__account">
+            Аккаунт
+            <div class="menu__account-iconplace">
+              <img
+                class="menu__account-icon"
+                src="./images/icon__COLOR_icon-main.svg"
+                alt="иконка"
+              />
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

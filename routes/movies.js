@@ -38,6 +38,7 @@ router.post(
           ),
         nameRU: Joi.string().required(),
         nameEN: Joi.string().required(),
+        movieId: Joi.number().integer().options({ convert: false }).required(),
       })
       .unknown(true),
   }),
@@ -48,7 +49,7 @@ router.delete(
   "/movies/:movieId",
   celebrate({
     params: Joi.object({
-      movieId: Joi.objectId(),
+      movieId: Joi.number(),
     }).unknown(true),
   }),
   deleteMovieByID

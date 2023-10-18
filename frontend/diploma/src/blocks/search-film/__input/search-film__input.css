@@ -1,6 +1,6 @@
 .search-film__input {
   border: none;
-  font-family: Inter;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 34px;
@@ -9,7 +9,7 @@
   color: rgba(160, 160, 160, 1);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .search-film__input {
     font-size: 18px;
     line-height: 22px;
