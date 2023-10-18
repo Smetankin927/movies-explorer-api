@@ -70,11 +70,17 @@ export function useFormWithValidation() {
   };
 }
 /******************     с параметрами           *************************/
+
+
+
+/******************     пробуем перекрутить          *************************/
 export function useFormWithValidationParams(Name, Email) {
   const [values, setValues] = React.useState({ name: Name, email: Email });
   const [errors, setErrors] = React.useState({});
   const [isValid, setIsValid] = React.useState(false);
-
+  console.log(values.email);
+  console.log(values.name);
+  console.log("VALIDATE AFTER");
   /****          общие             ****/
 
   const handleChange = (event) => {

@@ -145,6 +145,19 @@ function App() {
 
   /******              подписка на контекст                   ******/
   const [currentUser, setCurrentUser] = React.useState({});
+
+  const [values, setValues] = React.useState({
+    name: "",
+    email: "",
+  });
+
+  React.useEffect(() => {
+    setValues({
+      name: currentUser.name,
+      email: currentUser.email,
+    });
+  }, [currentUser]);
+
   /******               api для currentUser                      ******/
 
   React.useEffect(() => {
@@ -534,6 +547,8 @@ function App() {
             element={
               <ProtectedRouteElement
                 element={Account}
+                setValues={setValues}
+                values={values}
                 onUpdateUser={handleUpdateUser}
                 handleSignOut={handleSignOut}
                 loggedIn={loggedIn}

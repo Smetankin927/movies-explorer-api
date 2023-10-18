@@ -8,11 +8,51 @@ function Account(props) {
   const currentUser = React.useContext(CurrentUserContext);
   /*****        работа с формой                *****/
 
-  const { values, handleChange, errors, isValid, handleEmail, resetForm } =
-    useFormWithValidationParams(currentUser.name, currentUser.email);
+  const [errors, setErrors] = React.useState({});
+  const [isValid, setIsValid] = React.useState(false);
 
-  /*****        обновляем данные (FIXME)              *****/
-  function handleSubmit(e) {
+  /****          общие             ****/
+
+  const handleChange = (event) => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+
+    console.log("value");
+    console.log(value);
+
+    props.setValues({ ...props.values, [name]: value });
+    setErrors({ ...errors, [name]: target.validationMessage });
+    let tmp = target.closest("form").checkValidity();
+    console.log("tmp");
+    console.log(tmp);
+
+    setIsValid(tmp);
+  };
+  /****           email              ****/
+
+  //const [email, setEmail] = React.useState(Email);
+
+  const handleEmail = (event) => {
+    const target = event.target;
+    let inputValue = event.target.value;
+    //setEmail(inputValue);
+    props.setValues({ ...props.values, ["email"]: inputValue });
+    let emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    if (!emailRegex.test(inputValue)) {
+      setErrors({ ...errors, ["email"]: "please enter valid email" });
+      var A = false && target.closest("form").checkValidity();
+      setIsValid(A);
+    } else {
+      setErrors({ ...errors, ["email"]: "" });
+      var B = true && target.closest("form").checkValidity();
+
+      setIsValid(B);
+    }
+  };
+
+  // /*****        обновляем данные (FIXME)              *****/
+  const handleSubmit = (e) => {
     // Запрещаем браузеру переходить по адресу формы
     e.preventDefault();
     props.setTooltipMessages({
@@ -21,13 +61,12 @@ function Account(props) {
     });
     // Передаём значения управляемых компонентов во внешний обработчик
     props.onUpdateUser({
-      name: values.name,
-      email: values.email,
+      name: props.values.name,
+      email: props.values.email,
     });
-  }
+  };
 
   /*****         return             ******/
-
   return (
     <main className="content">
       <section className="account">
@@ -47,7 +86,7 @@ function Account(props) {
               minLength="2"
               maxLength="30"
               placeholder="Виталий"
-              value={values.name}
+              value={props.values.name}
               onChange={handleChange}
               required
             />
@@ -62,7 +101,7 @@ function Account(props) {
               minLength="2"
               maxLength="30"
               onChange={handleEmail}
-              value={values.email}
+              value={props.values.email}
               required
             />
           </div>
@@ -70,12 +109,26 @@ function Account(props) {
           <span className="account__input-error">{errors.email}</span>
           <button
             className={
-              isValid
-                ? "account__edit-button"
-                : "account__edit-button account__edit-button_disable"
+              !(
+                isValid &&
+                !(
+                  props.values.name === currentUser.name &&
+                  props.values.email === currentUser.email
+                )
+              )
+                ? "account__edit-button account__edit-button_disable"
+                : "account__edit-button"
             }
             type="submit"
-            disabled={!isValid}
+            disabled={
+              !(
+                isValid &&
+                !(
+                  props.values.name === currentUser.name &&
+                  props.values.email === currentUser.email
+                )
+              )
+            }
           >
             Редактировать
           </button>
