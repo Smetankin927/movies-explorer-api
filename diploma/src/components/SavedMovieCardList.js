@@ -4,18 +4,7 @@ import SearchFilm from "./SearchFilm";
 import Preloader from "./Preloader";
 
 function SavedMovieCardList(props) {
-  const handleMorecklick = () => {
-    let tmp = Math.ceil(props.numberCards) + Math.ceil(props.numberMoreCards);
-    props.setNumberCards(tmp);
-    localStorage.setItem("numRender", tmp);
-  };
-
-  console.log(props.numberCards);
-  console.log("props.numberCards");
   console.log(props.cards);
-  console.log("preloader");
-  console.log(props.isPreloaderActive);
-  console.log(props.cards.slice(-props.numberCards).reverse());
   return (
     <main className="content">
       <SearchFilm
@@ -32,7 +21,7 @@ function SavedMovieCardList(props) {
         ) : (
           <ul className="cards-grid__container">
             {props.cards
-              .slice(0, 2)
+              .slice(-props.numberCards)
               .reverse()
               .map((item) => (
                 <Card

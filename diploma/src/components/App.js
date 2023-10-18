@@ -262,7 +262,6 @@ function App() {
             //пополняем массив cards
             localStorage.setItem("cards", JSON.stringify(cardsData));
             setCards(cardsData);
-            setCardsSavedRender(cardsData);
             filterFilms(filmname);
           })
           .catch((error) => console.log(`Ошибка: ${error}`));

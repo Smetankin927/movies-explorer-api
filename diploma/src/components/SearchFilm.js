@@ -17,23 +17,16 @@ function SearchFilm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.setPreloaderActive(true);
-    if (location.pathname === "/movies") {
-      localStorage.setItem("filmSearch", values.film);
-    }
-    if (location.pathname === "/movies-saved") {
-      localStorage.setItem("filmSearchSaved", values.film);
-    }
+    checkWhoIs();
     props.hadleSearchFilms(values.film, props.isOn);
   };
 
-  const realHandleChange = (event) => {
-    handleChange(event);
-    // if (
-    //   location.pathname === "/movies-saved" &&
-    //   (values.film == null || values.film === "" || values.film.length === 1)
-    // ) {
-    //props.hadleSearchFilms(values.film, props.isOn);
-    // }
+  const checkWhoIs = () => {
+    if (location.pathname === "/movies") {
+      localStorage.setItem("filmSearch", values.film);
+    } else if (location.pathname === "/movies-saved") {
+      localStorage.setItem("filmSearchSaved", values.film);
+    }
   };
 
   /***************             return                 ***************/
@@ -53,7 +46,7 @@ function SearchFilm(props) {
               name="film"
               placeholder="Фильм"
               minLength={2}
-              onChange={realHandleChange}
+              onChange={handleChange}
               value={values.film}
               required
             />
@@ -64,7 +57,7 @@ function SearchFilm(props) {
               name="film"
               placeholder="Фильм"
               minLength={2}
-              onChange={realHandleChange}
+              onChange={handleChange}
               value={values.film}
             />
           )}
