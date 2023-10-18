@@ -1,0 +1,19 @@
+.footer__underline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .footer__underline {
+    margin-top: 23px;
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .footer__underline {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 17px;
+  }
+}

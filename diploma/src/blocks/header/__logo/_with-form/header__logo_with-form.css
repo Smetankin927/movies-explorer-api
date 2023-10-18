@@ -1,0 +1,15 @@
+.header__logo_with-form {
+  padding-right: 358px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 740px) {
+  .header__logo_with-form {
+    padding-right: 224px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .header__logo_with-form {
+    padding: 0px;
+  }
+}

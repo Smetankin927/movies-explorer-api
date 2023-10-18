@@ -1,0 +1,19 @@
+.technologies {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 70px;
+  /* height: 425px; */
+  background-color: rgba(245, 245, 245, 1);
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .technologies {
+    padding: 88px 50px 92px 50px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .technologies {
+    padding: 97px 18px 70px 18px;
+  }
+}

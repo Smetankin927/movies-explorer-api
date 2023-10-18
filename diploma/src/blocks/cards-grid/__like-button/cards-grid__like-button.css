@@ -1,0 +1,14 @@
+.cards-grid__like-button {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(249, 249, 249, 1);
+  background-image: url(../../../images/back__COLOR_special-10.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 12px;
+}
+
+.cards-grid__like-button:hover {
+  cursor: pointer;
+}

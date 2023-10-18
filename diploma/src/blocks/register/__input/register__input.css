@@ -1,0 +1,15 @@
+.register__input {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  border: none;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+  padding: 0;
+  padding-bottom: 9px;
+  width: 100%;
+  margin: 0;
+}

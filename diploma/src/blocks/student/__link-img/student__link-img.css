@@ -1,0 +1,13 @@
+.student__link-img {
+  width: 19px;
+  height: 59px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 741px) {
+  .student__link-img {
+    width: 18px;
+    height: 11px;
+    margin-top: 7px;
+    margin-right: 1px;
+  }
+}

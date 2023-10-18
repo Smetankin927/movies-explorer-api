@@ -1,0 +1,7 @@
+.header__film-link_black {
+  color: rgba(0, 0, 0, 1);
+}
+.header__film-link_black:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+}

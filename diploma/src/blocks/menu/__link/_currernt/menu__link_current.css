@@ -1,0 +1,10 @@
+.menu__link_current {
+  text-decoration: underline solid 2px rgba(0, 0, 0, 1);
+  text-underline-offset: 7px;
+}
+
+@media screen and (max-width: 740px) {
+  .menu__link_current {
+    text-underline-offset: 10px;
+  }
+}

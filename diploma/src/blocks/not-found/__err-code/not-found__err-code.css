@@ -1,0 +1,19 @@
+.not-found__err-code {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 140px;
+  font-weight: 400;
+  line-height: 169px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 0;
+  margin-top: 246px;
+  padding: 0;
+}
+
+@media screen and (max-width: 740px) {
+  .not-found__err-code {
+    font-size: 80px;
+    line-height: 97px;
+    margin-top: 328px;
+  }
+}

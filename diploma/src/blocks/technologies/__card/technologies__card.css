@@ -1,0 +1,17 @@
+.technologies__card {
+  list-style-type: none;
+  width: 90px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+}
+
+@media screen and (max-width: 880px) {
+  .technologies__card {
+    width: 84px;
+    height: 57px;
+  }
+}

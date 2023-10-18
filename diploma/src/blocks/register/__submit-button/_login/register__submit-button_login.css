@@ -1,0 +1,15 @@
+.register__submit-button_login {
+  margin-top: 223px; /*FIXME */
+}
+
+@media screen and (min-width: 741px) and (max-width: 880px) {
+  .register__submit-button_login {
+    margin-top: 205px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .register__submit-button_login {
+    margin-top: 297px;
+  }
+}

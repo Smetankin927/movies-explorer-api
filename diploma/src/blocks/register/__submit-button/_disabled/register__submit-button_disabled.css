@@ -1,0 +1,8 @@
+.register__submit-button_disabled {
+  background-color: grey;
+}
+
+.register__submit-button_disabled:hover {
+  cursor: auto;
+  background-color: grey;
+}
