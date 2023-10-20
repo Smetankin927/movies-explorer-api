@@ -8,7 +8,10 @@ function SearchFilm(props) {
 
   localStorage.removeItem("filmSearchSaved");
   const filmSearch =
-    location.pathname === "/movies" ? localStorage.getItem("filmSearch") : "";
+    location.pathname === "/movies" &&
+    localStorage.getItem("filmSearch") !== null
+      ? localStorage.getItem("filmSearch")
+      : "";
   const { values, handleChange, errors, isValid, resetForm } =
     useFormWithValidationFilms(filmSearch);
   /****************           ищем фильмы, записываем поиск в localStorage              *************** */

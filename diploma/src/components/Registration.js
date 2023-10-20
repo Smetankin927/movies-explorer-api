@@ -29,9 +29,18 @@ function Registration(props) {
         //OPEN MODAL WINDOW
       })
       .then(() => {
-        props.handleLogin(); //set isLogedIn = true
-        //navigate("/signin");
-        navigate("/movies");
+        Auth.authorize(values.password, values.email)
+          .then((data) => {
+            console.log("register");
+            props.handleLogin(); //set isLogedIn = true
+            localStorage.setItem("jwt", data.token);
+            props.setUserEmail(values.email); //FIXME
+
+            navigate("/movies");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((err) => {
         console.log("ПРОБЛЕМА РЕГИСТРАЦИИ");

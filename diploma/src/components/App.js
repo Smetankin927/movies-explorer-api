@@ -360,7 +360,7 @@ function App() {
       if (
         localStorage.getItem("filmSearch").trim() &&
         localStorage.getItem("filmSearch").trim() !== "" &&
-        localStorage.getItem("filmSearch").trim() !== null
+        localStorage.getItem("filmSearch").trim() !== "null"
       ) {
         console.log("filter1");
         let newCards = JSON.parse(localStorage.getItem("cards")).filter(
@@ -389,7 +389,7 @@ function App() {
       if (
         localStorage.getItem("filmSearch").trim() &&
         localStorage.getItem("filmSearch").trim() !== "" &&
-        localStorage.getItem("filmSearch").trim() !== null
+        localStorage.getItem("filmSearch").trim() !== "null"
       ) {
         console.log("filter2");
         console.log(localStorage.getItem("filmSearch") === " ");
@@ -438,7 +438,8 @@ function App() {
   /******               отслеживаем изменение чекбокса          *******/
   React.useEffect(() => {
     if (loggedIn) {
-      filterFilms(localStorage.getItem("filmSearch"), valueToogle);
+      hadleSearchFilms(localStorage.getItem("filmSearch"), valueToogle);
+      //filterFilms(localStorage.getItem("filmSearch"), valueToogle);
     }
   }, [valueToogle]);
 
@@ -515,6 +516,7 @@ function App() {
                 handleLogin={() => {
                   setLoggedIn(true);
                 }}
+                setUserEmail={changeUserEmail}
                 setTooltipMessages={setTooltipMessages}
                 setIsInfoTooltipOpen={setIsInfoTooltipOpen}
                 setIsSuccessInfoTooltipStatus={setIsSuccessInfoTooltipStatus}
