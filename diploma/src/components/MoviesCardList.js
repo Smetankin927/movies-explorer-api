@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card";
 import SearchFilm from "./SearchFilm";
 import Preloader from "./Preloader";
+
 function MoviesCardList(props) {
   const handleMorecklick = () => {
     let tmp = Math.ceil(props.numberCards) + Math.ceil(props.numberMoreCards);
@@ -9,7 +10,8 @@ function MoviesCardList(props) {
     props.setNumberCards(tmp);
     localStorage.setItem("numRender", tmp);
   };
-
+  console.log("props.cards");
+  console.log(props.cards);
   return (
     <main className="content">
       <SearchFilm
@@ -22,7 +24,9 @@ function MoviesCardList(props) {
       <section className="cards-grid">
         {props.isPreloaderActive ? (
           <Preloader />
-        ) : (
+        ) : !!props.cards && props.loggedIn ? (
+          //при получении loggedIn мы точно получаем наш список лайкнутых карточек
+
           <>
             <ul className="cards-grid__container">
               {props.cards
@@ -30,6 +34,7 @@ function MoviesCardList(props) {
                 .reverse()
                 .map((item) => (
                   <Card
+                    trailer={item.trailerLink}
                     handleCardDelete={props.handleCardDelete}
                     saved={props.saved}
                     card={item}
@@ -45,7 +50,7 @@ function MoviesCardList(props) {
             </ul>
             <button
               className={
-                props.cards.length >= props.numberCards
+                props.cards.length > props.numberCards
                   ? "cards-grid__button-more"
                   : "cards-grid__button-more_hidden"
               }
@@ -55,6 +60,8 @@ function MoviesCardList(props) {
               Ещё
             </button>
           </>
+        ) : (
+          <h2 className="cards-grid__nothing-message">Ничего не найдено</h2>
         )}
       </section>
     </main>

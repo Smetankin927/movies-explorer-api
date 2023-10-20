@@ -5,7 +5,7 @@ import { useFormWithValidationFilms } from "../utils/FormValidate";
 function SearchFilm(props) {
   const location = useLocation();
   /********         достаем запрос из   localStorage           ******* */
-  
+
   localStorage.removeItem("filmSearchSaved");
   const filmSearch =
     location.pathname === "/movies" ? localStorage.getItem("filmSearch") : "";
@@ -43,7 +43,6 @@ function SearchFilm(props) {
               type="text"
               name="film"
               placeholder="Фильм"
-              minLength={2}
               onChange={handleChange}
               value={values.film}
               required
@@ -54,7 +53,6 @@ function SearchFilm(props) {
               type="text"
               name="film"
               placeholder="Фильм"
-              minLength={2}
               onChange={handleChange}
               value={values.film}
             />

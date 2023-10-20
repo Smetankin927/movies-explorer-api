@@ -38,6 +38,8 @@ class MoviesApi {
   }
 
   deleteCard(cardId) {
+    console.log("Удаляем в апи");
+
     return fetch(`${this._url}/movies/${cardId}`, {
       credentials: "include",
       method: "DELETE",

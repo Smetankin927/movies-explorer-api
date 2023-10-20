@@ -18,14 +18,9 @@ function Account(props) {
     const name = target.name;
     const value = target.value;
 
-    console.log("value");
-    console.log(value);
-
     props.setValues({ ...props.values, [name]: value });
     setErrors({ ...errors, [name]: target.validationMessage });
     let tmp = target.closest("form").checkValidity();
-    console.log("tmp");
-    console.log(tmp);
 
     setIsValid(tmp);
   };

@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { apiMovies } from "../utils/MoviesApi";
 
 function Card(props) {
   const isButtonLike = props.buttonName === "like" ? true : false;
   const isButtonRemove = props.buttonName === "remove" ? true : false;
-  let flag = props.saved.some((it) => it.nameRU === props.card.nameRU);
-  console.log("flag like");
-  console.log(flag);
-  const [isLiked, setIsLiked] = React.useState(flag);
+  const flag = props.saved.some((it) => it.nameRU === props.card.nameRU);
 
-  //console.log(isLiked);
+  console.log("card saved");
+  console.log(props.saved);
+  const [isLiked, setIsLiked] = React.useState(flag);
+  React.useEffect(
+    () => {
+      const flag1 = props.saved.some((it) => it.nameRU === props.card.nameRU);
+      setIsLiked(flag1);
+    },
+    props.saved,
+    props.cards
+  );
 
   const handleLikeClick = () => {
     props.onLikeCard(props.card, isLiked, setIsLiked);
   };
-  //console.log(props.saved);
+
   const handleDeleteClick = () => {
     /*заглушка */
     props.handleCardDelete(props.card.movieId);
+    /*выставить лайк*/
+  };
+  const handleTrailerClick = () => {
+    window.open(props.trailer, "_blank");
   };
 
   /* /// */
   return (
     <li className="cards-grid__item">
-      <img className="cards-grid__img" src={props.filmImg} alt={props.altImg} />
+      <img
+        className="cards-grid__img"
+        src={props.filmImg}
+        alt={props.altImg}
+        onClick={handleTrailerClick}
+      />
       <div className="cards-grid__overline">
         <h2 className="cards-grid__name">{props.Name}</h2>
         {isButtonLike && (

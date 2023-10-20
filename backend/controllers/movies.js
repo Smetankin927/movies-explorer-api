@@ -41,7 +41,11 @@ function createMovie(req, res, next) {
     movieId: movieId,
     owner: req.user._id, //keep in mind
   })
-    .then((cards) => res.status(201).send(cards))
+    .then((cards) => {
+      console.log("like");
+      console.log(cards);
+      res.status(201).send(cards);
+    })
     .catch((err) => {
       if (err.name === "ValidationError" || err.name === "CastError") {
         console.log("err createMovie");
@@ -65,9 +69,9 @@ function deleteMovieByID(req, res, next) {
         throw new NotFoundError("Карточка не найден");
       }
       if (req.user._id == card.owner) {
-        Movie.findOneAndRemove(req.params.movieId)
+        Movie.findOneAndRemove({ movieId: req.params.movieId })
           .then((card) => {
-            res.status(200).send({ data: card });
+            res.status(200).send(card);
           })
           .catch((err) => {
             if (err.name === "CastError") {

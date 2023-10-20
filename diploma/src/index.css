@@ -132,6 +132,7 @@
 @import url(./blocks/cards-grid/__chrono/cards-grid__chrono.css);
 @import url(./blocks/cards-grid/__button-more/cards-grid__button-more.css);
 @import url(./blocks/cards-grid/__button-more/_hidden/cards-grid__button-more_hidde.css);
+@import url(./blocks/cards-grid/__nothing-message/cards-grid__nothing-message.css);
 /* ///account/// */
 @import url(./blocks/account/account.css);
 @import url(./blocks/account/__greeting/account__greeting.css);
