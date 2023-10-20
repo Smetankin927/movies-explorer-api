@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-import { apiMovies } from "../utils/MoviesApi";
+import React from "react";
 
 function Card(props) {
   const isButtonLike = props.buttonName === "like" ? true : false;
   const isButtonRemove = props.buttonName === "remove" ? true : false;
   const flag = props.saved.some((it) => it.nameRU === props.card.nameRU);
-
-  console.log("card saved");
-  console.log(props.saved);
   const [isLiked, setIsLiked] = React.useState(flag);
   React.useEffect(
     () => {

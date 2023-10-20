@@ -271,9 +271,12 @@ function App() {
           // тут деструктурируете ответ от сервера, чтобы было понятнее, что пришло
           .then((cardsData) => {
             //пополняем массив cards
+            console.log("movies");
+            console.log(cardsData);
             localStorage.setItem("cards", JSON.stringify(cardsData));
             setCards(cardsData);
-            filterFilms(filmname);
+
+            filterFilms(filmname, valueToogle);
           })
           .catch((error) => console.log(`Ошибка: ${error}`));
       } else {
@@ -281,6 +284,7 @@ function App() {
         navigate("/signup");
       }
     } else if (localStorage.getItem("cards")) {
+      console.log("ELSE45555");
       setCards(JSON.parse(localStorage.getItem("cards")));
       filterFilms(filmname, valueToogle);
     }
@@ -353,7 +357,12 @@ function App() {
   ////////////////////////////////////////////////////////////////////
   const filterFilms = (filmname, valueToogle) => {
     if (valueToogle) {
-      if (localStorage.getItem("cards")) {
+      if (
+        localStorage.getItem("filmSearch").trim() &&
+        localStorage.getItem("filmSearch").trim() !== "" &&
+        localStorage.getItem("filmSearch").trim() !== null
+      ) {
+        console.log("filter1");
         let newCards = JSON.parse(localStorage.getItem("cards")).filter(
           function (item) {
             return (
@@ -371,9 +380,20 @@ function App() {
         );
         setCardsRender(newCards);
         setPreloaderActive(false);
+      } else {
+        console.log("ELSE1");
+        setCardsRender([]);
+        setPreloaderActive(false);
       }
     } else {
-      if (localStorage.getItem("cards")) {
+      if (
+        localStorage.getItem("filmSearch").trim() &&
+        localStorage.getItem("filmSearch").trim() !== "" &&
+        localStorage.getItem("filmSearch").trim() !== null
+      ) {
+        console.log("filter2");
+        console.log(localStorage.getItem("filmSearch") === " ");
+
         let newCards = JSON.parse(localStorage.getItem("cards")).filter(
           function (item) {
             return (
@@ -389,6 +409,10 @@ function App() {
           }
         );
         setCardsRender(newCards);
+        setPreloaderActive(false);
+      } else {
+        console.log("ELSE2");
+        setCardsRender([]);
         setPreloaderActive(false);
       }
     }
@@ -408,19 +432,17 @@ function App() {
         }
       }
     }
+    setPreloaderActive(false);
   }, [location.pathname]);
 
   /******               отслеживаем изменение чекбокса          *******/
   React.useEffect(() => {
-    console.log("11111");
     if (loggedIn) {
       filterFilms(localStorage.getItem("filmSearch"), valueToogle);
     }
   }, [valueToogle]);
 
   React.useEffect(() => {
-    console.log("we check toogle");
-    console.log(loggedIn);
     if (loggedIn) {
       filterSavedFilms(
         localStorage.getItem("filmSearchSaved"),
@@ -451,8 +473,6 @@ function App() {
     if (isLiked) {
       handleCardDelete(card.id);
       setIsLiked(false);
-      console.log("isliked");
-      console.log(isLiked);
     } else {
       const newCard = {
         country: card.country,
@@ -570,8 +590,6 @@ function App() {
                 handleSignOut={handleSignOut}
                 loggedIn={loggedIn}
                 setTooltipMessages={setTooltipMessages}
-                // setIsInfoTooltipOpen={setIsInfoTooltipOpen}
-                // setIsSuccessInfoTooltipStatus={setIsSuccessInfoTooltipStatus}
               />
             }
           />

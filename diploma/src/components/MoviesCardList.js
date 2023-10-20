@@ -24,7 +24,7 @@ function MoviesCardList(props) {
       <section className="cards-grid">
         {props.isPreloaderActive ? (
           <Preloader />
-        ) : !!props.cards && props.loggedIn ? (
+        ) : !!props.cards && props.cards.length > 0 && props.loggedIn ? (
           //при получении loggedIn мы точно получаем наш список лайкнутых карточек
 
           <>
@@ -60,8 +60,10 @@ function MoviesCardList(props) {
               Ещё
             </button>
           </>
-        ) : (
+        ) : props.cards.length > 0 ? (
           <h2 className="cards-grid__nothing-message">Ничего не найдено</h2>
+        ) : (
+          <h2 className="cards-grid__nothing-message">Введите слово</h2>
         )}
       </section>
     </main>

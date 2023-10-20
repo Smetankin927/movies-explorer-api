@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 import SearchFilm from "./SearchFilm";
 import Preloader from "./Preloader";
-import { apiMovies } from "../utils/MoviesApi";
 
 function SavedMovieCardList(props) {
   return (
@@ -18,7 +17,7 @@ function SavedMovieCardList(props) {
       <section className="cards-grid">
         {props.isPreloaderActive ? (
           <Preloader />
-        ) : !!props.cards && props.loggedIn ? (
+        ) : !!props.cards && props.cards.length > 0 && props.loggedIn ? (
           //при получении loggedIn мы точно получаем наш список лайкнутых карточек
           <ul className="cards-grid__container">
             {props.cards
@@ -42,8 +41,10 @@ function SavedMovieCardList(props) {
                 />
               ))}
           </ul>
-        ) : (
+        ) : props.cards.length > 0 ? (
           <h2 className="cards-grid__nothing-message">Ничего не найдено</h2>
+        ) : (
+          <h2 className="cards-grid__nothing-message">Нет сохраненных</h2>
         )}
       </section>
     </main>
