@@ -54,13 +54,19 @@ function App() {
       setScreenSize(getCurrentDimension());
     };
     window.addEventListener("resize", updateDimension);
-    if (screenSize.width > 1180) {
-      setnumberMoreCards(4);
-    } else if (screenSize.width <= 1180 && screenSize.width >= 750) {
-      setnumberMoreCards(2);
-    } else if (screenSize.width < 750) {
-      setnumberMoreCards(2);
-    }
+    setTimeout(() => {
+      if (screenSize.width > 1180) {
+        setNumberCards(16);
+        setnumberMoreCards(4);
+      } else if (screenSize.width <= 1180 && screenSize.width >= 750) {
+        setNumberCards(8);
+        setnumberMoreCards(2);
+      } else if (screenSize.width < 750) {
+        setNumberCards(5);
+        setnumberMoreCards(2);
+      }
+    }, 250);
+
     return () => {
       window.removeEventListener("resize", updateDimension);
     };
@@ -445,10 +451,14 @@ function App() {
 
   React.useEffect(() => {
     if (loggedIn) {
-      filterSavedFilms(
+      hadleSearchSavedFilms(
         localStorage.getItem("filmSearchSaved"),
         valueToogleSaved
       );
+      // filterSavedFilms(
+      //   localStorage.getItem("filmSearchSaved"),
+      //   valueToogleSaved
+      // );
     }
   }, [valueToogleSaved]);
   /******               отслеживаем изменение сохраненных карточек          *******/

@@ -63,13 +63,18 @@ function getMovies(req, res) {
 }
 
 function deleteMovieByID(req, res, next) {
-  Movie.findOne({ movieId: req.params.movieId })
+  Movie.findOne({ movieId: req.params.movieId, owner: req.user._id }) //changed
     .then((card) => {
       if (!card) {
         throw new NotFoundError("Карточка не найден");
       }
+
       if (req.user._id == card.owner) {
-        Movie.findOneAndRemove({ movieId: req.params.movieId })
+        //changed
+        Movie.findOneAndRemove({
+          movieId: req.params.movieId,
+          owner: req.user._id,
+        })
           .then((card) => {
             res.status(200).send(card);
           })
